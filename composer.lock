@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11c90b1a9c4df9351e6fa817371b56f6",
+    "content-hash": "3750b627365ddf1dbdb279b505c57664",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -153,11 +153,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iquestab/api-tools",
-                "reference": "e01a93b028b1f2cbe4c4704e3332f4511a9fbe69"
+                "reference": "bedd90ed0416143b36c9c674264bb8de7bdf169a"
             },
             "require": {
                 "laminas-api-tools/api-tools-api-problem": "^1.4",
-                "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+                "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
                 "laminas-api-tools/api-tools-content-validation": "1.10.x-dev",
                 "laminas-api-tools/api-tools-hal": "^1.4.1",
                 "laminas-api-tools/api-tools-mvc-auth": "1.7.x-dev",
@@ -249,7 +249,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2021-10-27T08:16:57+00:00"
+            "time": "2021-11-10T10:03:09+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-admin-ui",
@@ -460,11 +460,17 @@
         },
         {
             "name": "laminas-api-tools/api-tools-content-negotiation",
-            "version": "dev-http-request",
+            "version": "1.6.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bfoosness/api-tools-content-negotiation.git",
-                "reference": "8a72e88b1f6d43d798597d487923a28056fc58bd"
+                "url": "https://github.com/laminas-api-tools/api-tools-content-negotiation.git",
+                "reference": "293b91b9f92e9051a10e2185178c3eabf438ca28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-content-negotiation/zipball/293b91b9f92e9051a10e2185178c3eabf438ca28",
+                "reference": "293b91b9f92e9051a10e2185178c3eabf438ca28",
+                "shasum": ""
             },
             "require": {
                 "laminas-api-tools/api-tools-api-problem": "^1.4.0",
@@ -486,15 +492,12 @@
             "require-dev": {
                 "laminas-api-tools/api-tools-hal": "^1.4",
                 "laminas/laminas-coding-standard": "~2.2.0",
-                "laminas/laminas-console": "^2.9",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpunit/phpunit": "^9.3",
                 "psalm/plugin-phpunit": "^0.16.0",
                 "vimeo/psalm": "^4.7"
             },
-            "suggest": {
-                "laminas/laminas-console": "^2.0, if you intend to use the console request of RequestFactory"
-            },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laminas": {
@@ -506,29 +509,7 @@
                     "Laminas\\ApiTools\\ContentNegotiation\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "LaminasTest\\ApiTools\\ContentNegotiation\\": "test/"
-                }
-            },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@test"
-                ],
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "phpunit --colors=always --coverage-clover clover.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -541,14 +522,20 @@
                 "module"
             ],
             "support": {
-                "docs": "https://api-tools.getlaminas.org/documentation",
-                "issues": "https://github.com/laminas-api-tools/api-tools-content-negotiation/issues",
-                "source": "https://github.com/laminas-api-tools/api-tools-content-negotiation",
-                "rss": "https://github.com/laminas-api-tools/api-tools-content-negotiation/releases.atom",
                 "chat": "https://laminas.dev/chat",
-                "forum": "https://discourse.laminas.dev"
+                "docs": "https://api-tools.getlaminas.org/documentation",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas-api-tools/api-tools-content-negotiation/issues",
+                "rss": "https://github.com/laminas-api-tools/api-tools-content-negotiation/releases.atom",
+                "source": "https://github.com/laminas-api-tools/api-tools-content-negotiation"
             },
-            "time": "2021-08-06T15:55:32+00:00"
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2021-10-29T17:22:29+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-content-validation",
@@ -556,11 +543,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iquestab/api-tools-content-validation.git",
-                "reference": "68c85715de5b89e7002fe91b88dd8c5959c64afb"
+                "reference": "7acf3330d5065d28645b95dd39d2e37760a4af3c"
             },
             "require": {
                 "laminas-api-tools/api-tools-api-problem": "^1.3.0",
-                "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+                "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
                 "laminas/laminas-eventmanager": "^2.6.3 || ^3.0.1",
                 "laminas/laminas-filter": "^2.7.1",
                 "laminas/laminas-http": "^2.5.4",
@@ -637,7 +624,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2021-10-27T07:55:50+00:00"
+            "time": "2021-11-10T10:13:07+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-hal",
@@ -728,11 +715,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iquestab/api-tools-mvc-auth.git",
-                "reference": "490179cbbc61701a111425d35835e64f4f93e978"
+                "reference": "d0fe339952884bf2acadbdf37644d56d9ba2c36a"
             },
             "require": {
                 "laminas-api-tools/api-tools-api-problem": "^1.4.0",
-                "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+                "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
                 "laminas-api-tools/api-tools-oauth2": "1.8.x-dev",
                 "laminas/laminas-authentication": "^2.5.3",
                 "laminas/laminas-eventmanager": "^3.2",
@@ -809,7 +796,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2021-10-27T08:02:23+00:00"
+            "time": "2021-11-10T10:12:25+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-oauth2",
@@ -817,12 +804,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iquestab/api-tools-oauth2",
-                "reference": "5571652b8d7078366e14bdf8c4b76a2bbc53fbae"
+                "reference": "6594a837946e50dc2abf3ac68f874b60f392c7d9"
             },
             "require": {
                 "bshaffer/oauth2-server-php": "^1.10",
                 "laminas-api-tools/api-tools-api-problem": "^1.4",
-                "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+                "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
                 "laminas/laminas-crypt": "^3.4",
                 "laminas/laminas-http": "^2.13",
                 "laminas/laminas-mvc": "^2.7.15 || ^3.0.2",
@@ -909,7 +896,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2021-10-27T07:46:47+00:00"
+            "time": "2021-11-10T10:11:23+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-provider",
@@ -976,11 +963,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iquestab/api-tools-rest",
-                "reference": "3e6436ff0b91174c5a5e2daf9c2091879743176b"
+                "reference": "b56caff0db315545becdf7a164fba6f51f196ba0"
             },
             "require": {
                 "laminas-api-tools/api-tools-api-problem": "^1.4.0",
-                "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+                "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
                 "laminas-api-tools/api-tools-hal": "^1.4",
                 "laminas-api-tools/api-tools-mvc-auth": "1.7.x-dev",
                 "laminas-api-tools/api-tools-oauth2": "1.8.x-dev",
@@ -1061,7 +1048,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2021-10-27T08:09:04+00:00"
+            "time": "2021-11-10T10:11:54+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-rpc",
@@ -1069,11 +1056,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iquestab/api-tools-rpc",
-                "reference": "9200fb670059e73599a85870a58f313cc387dd46"
+                "reference": "ba75e0dec8d4fd343426aa4ef6e210b70ee90b22"
             },
             "require": {
                 "laminas-api-tools/api-tools-api-problem": "^1.3",
-                "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+                "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
                 "laminas/laminas-eventmanager": "^3.3",
                 "laminas/laminas-http": "^2.14",
                 "laminas/laminas-mvc": "^3.2",
@@ -1148,7 +1135,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2021-10-27T08:14:37+00:00"
+            "time": "2021-11-10T10:05:25+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-versioning",
@@ -3231,16 +3218,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.13.0",
+            "version": "v4.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "50953a2691a922aa1769461637869a0a2faa3f53"
+                "reference": "63a79e8daa781cac14e5195e63ed8ae231dd10fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/50953a2691a922aa1769461637869a0a2faa3f53",
-                "reference": "50953a2691a922aa1769461637869a0a2faa3f53",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/63a79e8daa781cac14e5195e63ed8ae231dd10fd",
+                "reference": "63a79e8daa781cac14e5195e63ed8ae231dd10fd",
                 "shasum": ""
             },
             "require": {
@@ -3281,26 +3268,26 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.1"
             },
-            "time": "2021-09-20T12:20:58+00:00"
+            "time": "2021-11-03T20:52:16+00:00"
         },
         {
             "name": "psr/container",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
-                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/513e0666f7216c7459170d56df27dfcefe1689ea",
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "php": ">=7.4.0"
             },
             "type": "library",
             "autoload": {
@@ -3329,9 +3316,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/1.1.1"
+                "source": "https://github.com/php-fig/container/tree/1.1.2"
             },
-            "time": "2021-03-05T17:36:06+00:00"
+            "time": "2021-11-05T16:50:12+00:00"
         },
         {
             "name": "psr/link",
@@ -4427,22 +4414,22 @@
         },
         {
             "name": "mongodb/mongodb",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "4afe9254e87252879bfbb625858e78fbe072daa0"
+                "reference": "b0bbd657f84219212487d01a8ffe93a789e1e488"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/4afe9254e87252879bfbb625858e78fbe072daa0",
-                "reference": "4afe9254e87252879bfbb625858e78fbe072daa0",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/b0bbd657f84219212487d01a8ffe93a789e1e488",
+                "reference": "b0bbd657f84219212487d01a8ffe93a789e1e488",
                 "shasum": ""
             },
             "require": {
                 "ext-hash": "*",
                 "ext-json": "*",
-                "ext-mongodb": "^1.10.0",
+                "ext-mongodb": "^1.11.0",
                 "jean85/pretty-package-versions": "^1.2 || ^2.0.1",
                 "php": "^7.1 || ^8.0",
                 "symfony/polyfill-php80": "^1.19"
@@ -4455,7 +4442,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9.x-dev"
+                    "dev-master": "1.10.x-dev"
                 }
             },
             "autoload": {
@@ -4490,9 +4477,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mongodb/mongo-php-library/issues",
-                "source": "https://github.com/mongodb/mongo-php-library/tree/1.9.0"
+                "source": "https://github.com/mongodb/mongo-php-library/tree/1.10.0"
             },
-            "time": "2021-07-13T20:03:24+00:00"
+            "time": "2021-10-20T22:22:37+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -5097,23 +5084,23 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.7",
+            "version": "9.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "d4c798ed8d51506800b441f7a13ecb0f76f12218"
+                "reference": "cf04e88a2e3c56fc1a65488afd493325b4c1bc3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d4c798ed8d51506800b441f7a13ecb0f76f12218",
-                "reference": "d4c798ed8d51506800b441f7a13ecb0f76f12218",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/cf04e88a2e3c56fc1a65488afd493325b4c1bc3e",
+                "reference": "cf04e88a2e3c56fc1a65488afd493325b4c1bc3e",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
-                "nikic/php-parser": "^4.12.0",
+                "nikic/php-parser": "^4.13.0",
                 "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0.3",
                 "phpunit/php-text-template": "^2.0.2",
@@ -5162,7 +5149,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.7"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.8"
             },
             "funding": [
                 {
@@ -5170,7 +5157,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-17T05:39:03+00:00"
+            "time": "2021-10-30T08:01:38+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -6709,16 +6696,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.3.7",
+            "version": "v5.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "8b1008344647462ae6ec57559da166c2bfa5e16a"
+                "reference": "d4e409d9fbcfbf71af0e5a940abb7b0b4bad0bd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/8b1008344647462ae6ec57559da166c2bfa5e16a",
-                "reference": "8b1008344647462ae6ec57559da166c2bfa5e16a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d4e409d9fbcfbf71af0e5a940abb7b0b4bad0bd3",
+                "reference": "d4e409d9fbcfbf71af0e5a940abb7b0b4bad0bd3",
                 "shasum": ""
             },
             "require": {
@@ -6788,7 +6775,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.3.7"
+                "source": "https://github.com/symfony/console/tree/v5.3.10"
             },
             "funding": [
                 {
@@ -6804,7 +6791,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-25T20:02:16+00:00"
+            "time": "2021-10-26T09:30:15+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -7361,16 +7348,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v5.3.7",
+            "version": "v5.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "8d224396e28d30f81969f083a58763b8b9ceb0a5"
+                "reference": "d70c35bb20bbca71fc4ab7921e3c6bda1a82a60c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/8d224396e28d30f81969f083a58763b8b9ceb0a5",
-                "reference": "8d224396e28d30f81969f083a58763b8b9ceb0a5",
+                "url": "https://api.github.com/repos/symfony/string/zipball/d70c35bb20bbca71fc4ab7921e3c6bda1a82a60c",
+                "reference": "d70c35bb20bbca71fc4ab7921e3c6bda1a82a60c",
                 "shasum": ""
             },
             "require": {
@@ -7424,7 +7411,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v5.3.7"
+                "source": "https://github.com/symfony/string/tree/v5.3.10"
             },
             "funding": [
                 {
@@ -7440,7 +7427,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-26T08:00:08+00:00"
+            "time": "2021-10-27T18:21:46+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -7494,16 +7481,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "4.11.2",
+            "version": "4.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "6fba5eb554f9507b72932f9c75533d8af593688d"
+                "reference": "e42bc4a23f67acba28a23bb09c348e2ff38a1d87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/6fba5eb554f9507b72932f9c75533d8af593688d",
-                "reference": "6fba5eb554f9507b72932f9c75533d8af593688d",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/e42bc4a23f67acba28a23bb09c348e2ff38a1d87",
+                "reference": "e42bc4a23f67acba28a23bb09c348e2ff38a1d87",
                 "shasum": ""
             },
             "require": {
@@ -7527,7 +7514,7 @@
                 "openlss/lib-array2xml": "^1.0",
                 "php": "^7.1|^8",
                 "sebastian/diff": "^3.0 || ^4.0",
-                "symfony/console": "^3.4.17 || ^4.1.6 || ^5.0",
+                "symfony/console": "^3.4.17 || ^4.1.6 || ^5.0 || ^6.0",
                 "webmozart/path-util": "^2.3"
             },
             "provide": {
@@ -7545,7 +7532,7 @@
                 "psalm/plugin-phpunit": "^0.16",
                 "slevomat/coding-standard": "^7.0",
                 "squizlabs/php_codesniffer": "^3.5",
-                "symfony/process": "^4.3 || ^5.0",
+                "symfony/process": "^4.3 || ^5.0 || ^6.0",
                 "weirdan/prophecy-shim": "^1.0 || ^2.0"
             },
             "suggest": {
@@ -7593,30 +7580,30 @@
             ],
             "support": {
                 "issues": "https://github.com/vimeo/psalm/issues",
-                "source": "https://github.com/vimeo/psalm/tree/4.11.2"
+                "source": "https://github.com/vimeo/psalm/tree/4.12.0"
             },
-            "time": "2021-10-26T17:28:17+00:00"
+            "time": "2021-11-06T10:31:17+00:00"
         },
         {
             "name": "webimpress/coding-standard",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webimpress/coding-standard.git",
-                "reference": "8f4a220de33f471a8101836f7ec72b852c3f9f03"
+                "reference": "7a71421c7fc85827488f10c4c510fe80f94d1a74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webimpress/coding-standard/zipball/8f4a220de33f471a8101836f7ec72b852c3f9f03",
-                "reference": "8f4a220de33f471a8101836f7ec72b852c3f9f03",
+                "url": "https://api.github.com/repos/webimpress/coding-standard/zipball/7a71421c7fc85827488f10c4c510fe80f94d1a74",
+                "reference": "7a71421c7fc85827488f10c4c510fe80f94d1a74",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.3 || ^8.0",
-                "squizlabs/php_codesniffer": "^3.6"
+                "squizlabs/php_codesniffer": "^3.6.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5.4"
+                "phpunit/phpunit": "^9.5.10"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -7642,7 +7629,7 @@
             ],
             "support": {
                 "issues": "https://github.com/webimpress/coding-standard/issues",
-                "source": "https://github.com/webimpress/coding-standard/tree/1.2.2"
+                "source": "https://github.com/webimpress/coding-standard/tree/1.2.3"
             },
             "funding": [
                 {
@@ -7650,7 +7637,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-12T12:51:27+00:00"
+            "time": "2021-10-28T21:18:17+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -7700,6 +7687,7 @@
                 "issues": "https://github.com/webmozart/path-util/issues",
                 "source": "https://github.com/webmozart/path-util/tree/2.3.0"
             },
+            "abandoned": "symfony/filesystem",
             "time": "2015-12-17T08:42:14+00:00"
         }
     ],
